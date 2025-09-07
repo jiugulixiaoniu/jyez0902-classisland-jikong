@@ -2,19 +2,19 @@
     "ServerKind": 0,
     "Organization": "0902",
     "ClassPlanSource": {
-        "Value": "https://jiugulixiaoniu.github.io/jyez0902-classisland-jikong/0902/classplans.json",
-        "Version": 3
+        "Value": "https://jiugulixiaoniu.github.io/jyez0902-classisland-jikong/0902/ClassPlans.json",
+        "Version": 4
     },
     "TimeLayoutSource": {
         "Value": "https://jiugulixiaoniu.github.io/jyez0902-classisland-jikong/0902/timelayouts.json",
-        "Version": 4
+        "Version": 5
     },
     "SubjectsSource": {
         "Value": "https://jiugulixiaoniu.github.io/jyez0902-classisland-jikong/0902/subjects.json",
-        "Version": 5
+        "Version": 6
     },
     "PolicySource": {
-        "Version": 1,
+        "Version": 6,
         "Value": "https://jiugulixiaoniu.github.io/jyez0902-classisland-jikong/0902/Policy.json"
     }
 }
