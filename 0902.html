@@ -4,236 +4,21 @@
   <meta charset="UTF-8">
   <title>Classisland0902 IT人员 Policy策略 管理后台</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- 样式沿用你已有的 -->
   <style>
-    :root {
-  --primary: #667eea;
-  --secondary: #764ba2;
-  --success: #4caf50;
-  --radius: 12px;
-  --shadow: 0 8px 32px rgba(0, 0, 0, .2);
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-body {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-}
-
-/* ===== 玻璃面板 ===== */
-.glass {
-  background: rgba(255, 255, 255, .15);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, .18);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  width: 90%;
-  max-width: 660px;
-  /* 修改面板加宽到 660px 方便一行两列 */
-  overflow: hidden;
-  color: #fff;
-}
-
-.slider {
-  display: flex;
-  transition: transform .6s cubic-bezier(.4, 0, .2, 1);
-  width: 300%;
-}
-
-.slide {
-  width: 33.33333%;
-  flex-shrink: 0;
-  padding: 40px 35px;
-}
-
-h2 {
-  margin-bottom: 25px;
-  text-align: center;
-  font-weight: 600;
-}
-
-input[type=password] {
-  width: 100%;
-  padding: 14px 16px;
-  margin: 12px 0;
-  border: none;
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, .2);
-  color: #fff;
-  font-size: 16px;
-}
-
-input[type=password]::placeholder {
-  color: rgba(255, 255, 255, .7);
-}
-
-input[type=password]:focus {
-  outline: none;
-  background: rgba(255, 255, 255, .3);
-}
-
-button {
-  width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: var(--radius);
-  background: var(--primary);
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background .3s, transform .2s;
-}
-
-button:hover {
-  background: var(--secondary);
-}
-
-button:active {
-  transform: scale(.98);
-}
-
-.error {
-  margin-top: 12px;
-  text-align: center;
-  font-size: 14px;
-  color: #ffeb3b;
-}
-
-/* ===== 修改面板：一行两列 ===== */
-.json-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 15px;
-}
-
-.json-item {
-  flex: 1 1 48%;
-  /* 约 50% 宽，gap 补间隙 */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 15px;
-  background: rgba(255, 255, 255, .1);
-  border-radius: var(--radius);
-}
-
-.toggle {
-  width: 46px;
-  height: 24px;
-  background: rgba(255, 255, 255, .3);
-  border-radius: 12px;
-  position: relative;
-  cursor: pointer;
-  transition: background .3s;
-}
-
-.toggle.on {
-  background: var(--success);
-}
-
-.toggle::after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  border-radius: 50%;
-  top: 2px;
-  left: 2px;
-  transition: transform .3s;
-}
-
-.toggle.on::after {
-  transform: translateX(22px);
-}
-
-.hidden {
-  display: none;
-}
-.btn-primary {
-  display: block;          /* 占整行 */
-  width: 100%;
-  margin-top: 20px;        /* 与上方内容保持距离 */
-  padding: 14px;
-  border: none;
-  border-radius: var(--radius);
-  background: var(--primary);
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background .3s, transform .2s;
-}
-.btn-primary:hover {
-  background: var(--secondary);
-}
-.btn-primary:active {
-  transform: scale(.98);
-}
-.json-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 15px;
-}
-
-.json-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex: 1 1 48%;          /* 两列，不放大，允许缩小一点，但最小宽度固定 */
-  min-width: 280px;       /* 关键：防挤压！一行放不下就自动换行 */
-  padding: 12px 15px;
-  background: rgba(255, 255, 255, .1);
-  border-radius: var(--radius);
-}
-
-/* 文字区域不抢空间 */
-.json-item span {
-  flex-shrink: 1;
-  margin-right: 10px;
-  word-break: break-word;
-}
-
-/* 开关固定宽度，不被压缩 */
-.toggle {
-  flex-shrink: 0;
-  width: 46px;
-  height: 24px;
-  background: rgba(255, 255, 255, .3);
-  border-radius: 12px;
-  position: relative;
-  cursor: pointer;
-  transition: background .3s;
-}
-.toggle.on {
-  background: var(--success);
-}
-.toggle::after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  border-radius: 50%;
-  top: 2px;
-  left: 2px;
-  transition: transform .3s;
-}
-.toggle.on::after {
-  transform: translateX(22px);
-}
+    :root{--primary:#667eea;--secondary:#764ba2;--success:#4caf50;--radius:12px;--shadow:0 8px 32px rgba(0,0,0,.2)}
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',sans-serif}
+    body{height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--primary),var(--secondary))}
+    .glass{background:rgba(255,255,255,.15);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius);box-shadow:var(--shadow);width:90%;max-width:660px;overflow:hidden;color:#fff}
+    .slider{display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1);width:300%}
+    .slide{width:33.33333%;flex-shrink:0;padding:40px 35px}
+    h2{margin-bottom:25px;text-align:center;font-weight:600}
+    input[type=password]{width:100%;padding:14px 16px;margin:12px 0;border:none;border-radius:var(--radius);background:rgba(255,255,255,.2);color:#fff;font-size:16px}input[type=password]::placeholder{color:rgba(255,255,255,.7)}input[type=password]:focus{outline:none;background:rgba(255,255,255,.3)}
+    button{width:100%;padding:14px;border:none;border-radius:var(--radius);background:var(--primary);color:#fff;font-size:16px;font-weight:600;cursor:pointer;transition:background .3s,transform .2s}button:hover{background:var(--secondary)}button:active{transform:scale(.98)}
+    .error{margin-top:12px;text-align:center;font-size:14px;color:#ffeb3b}
+    .json-grid{display:flex;flex-wrap:wrap;gap:15px;margin-top:15px}
+    .json-item{flex:1 1 48%;min-width:280px;display:flex;justify-content:space-between;align-items:center;padding:12px 15px;background:rgba(255,255,255,.1);border-radius:var(--radius)}
+    .toggle{flex-shrink:0;width:46px;height:24px;background:rgba(255,255,255,.3);border-radius:12px;position:relative;cursor:pointer;transition:background .3s}.toggle.on{background:var(--success)}.toggle::after{content:'';position:absolute;width:20px;height:20px;background:#fff;border-radius:50%;top:2px;left:2px;transition:transform .3s}.toggle.on::after{transform:translateX(22px)}
+    .hidden{display:none}
   </style>
 </head>
 <body>
@@ -261,14 +46,15 @@ button:active {
   </div>
 
   <script>
-    // ===== 基础混淆（无外部库） =====
-    const PASSWORD_1 = atob('TXp5NDQ2MjcwMDU3'); // 123456
-    const PASSWORD_2 = atob('MjAyNUNTUEoxYmlzaGVuZw=='); // 654321
+    // ===== 基础混淆 =====
+    const PASSWORD_1 = atob('MTIzNDU2'); // 123456
+    const PASSWORD_2 = atob('NjU0MzIx'); // 654321
     const TOKEN      = atob('Z2hwX0JKYWVrSnZaZXFYNUJOSDYzeEJZcm5OV3Y1c1RDZjFBanBZaQ=='); // 你的真实token
 
     const OWNER = 'jiugulixiaoniu';
     const REPO  = 'jyez0902-classisland-jikong';
     const PATH  = '0902/Policy.json';
+    const PROXY = 'https://ghp.kkapi.org/'; // ✅ 代理地址，绕过CSP
 
     let policy = {};
 
@@ -287,7 +73,7 @@ button:active {
     }
 
     async function loadPolicy(){
-      const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`);
+      const res = await fetch(`${PROXY}repos/${OWNER}/${REPO}/contents/${PATH}`);
       const data = await res.json();
       policy = JSON.parse(decodeURIComponent(escape(atob(data.content))));
       renderEditor();
@@ -318,11 +104,11 @@ button:active {
     async function savePolicy(){
       const err=document.getElementById('err3');
       try{
-        const res=await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`);
+        const res=await fetch(`${PROXY}repos/${OWNER}/${REPO}/contents/${PATH}`);
         const data=await res.json();
         const content=btoa(unescape(encodeURIComponent(JSON.stringify(policy,null,2))));
         const body={message:'Update Policy.json via frontend',content,sha:data.sha};
-        const put=await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`,{
+        const put=await fetch(`${PROXY}repos/${OWNER}/${REPO}/contents/${PATH}`,{
           method:'PUT',
           headers:{Authorization:`token ${TOKEN}`,'Content-Type':'application/json'},
           body:JSON.stringify(body)
