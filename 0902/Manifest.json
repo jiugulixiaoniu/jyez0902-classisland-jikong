@@ -2,11 +2,11 @@
   "ServerKind": 0,
   "Organization": "JGL Studio",
   "ClassPlanSource": {
-    "Version": "1.0",
+    "Version": 1,
     "Value": "https://jiugulixiaoniu.github.io/jyez0902-classisland-jikong/0902/ClassPlan.json"
   },
   "PolicySource": {
-    "Version": "1.0",
+    "Version": 1,
     "Value": "https://jiugulixiaoniu.github.io/jyez0902-classisland-jikong/0902/Policy.json"
   }
 }
