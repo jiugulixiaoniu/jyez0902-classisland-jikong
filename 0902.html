@@ -335,23 +335,28 @@ button:active {
   };
 
   const ed = document.getElementById('editor');
-  ed.innerHTML = '';
+  ed.innerHTML = '';   // 先清空
 
   for (const k in policy) {
-    const div = document.createElement('div');
-    div.className = 'json-item';
+    const item = document.createElement('div');
+    item.className = 'json-item';
 
     const label = document.createElement('span');
     label.textContent = map[k] || k;
 
     const toggle = document.createElement('div');
     toggle.className = 'toggle' + (policy[k] ? ' on' : '');
-    toggle.onclick = () => toggleKey(k, toggle);
+    toggle.onclick = () => {
+      policy[k] = !policy[k];
+      toggle.classList.toggle('on');
+      console.log('[toggle]', k, '=', policy[k]);
+    };
 
-    div.appendChild(label);
-    div.appendChild(toggle);
-    ed.appendChild(div);
+    item.appendChild(label);
+    item.appendChild(toggle);
+    ed.appendChild(item);
   }
+  console.log('[renderEditor] done, total items =', Object.keys(policy).length);
 }
 function toggleKey(k, el) {
   policy[k] = !policy[k];
