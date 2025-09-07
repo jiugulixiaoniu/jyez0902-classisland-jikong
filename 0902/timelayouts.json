@@ -1,6 +1,6 @@
 {
-  "Name": "",
-  "TimeLayouts": {
+    "Name": "0902",
+    "TimeLayouts": {
     "d0ed9d46-df11-468b-82de-629a0a7464d6": {
       "Name": "每日",
       "Layouts": [
@@ -10,6 +10,8 @@
           "TimeType": 0,
           "IsHideDefault": false,
           "DefaultClassId": "3bbed0c0-bcf3-4dfe-a78d-5da9b02cf8bd",
+          "BreakName": "",
+          "ActionSet": null,
           "AttachedObjects": {
             "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
               "IsClassOnNotificationEnabled": true,
@@ -29,6 +31,8 @@
           "TimeType": 0,
           "IsHideDefault": false,
           "DefaultClassId": "",
+          "BreakName": "",
+          "ActionSet": null,
           "AttachedObjects": {
             "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
               "IsClassOnNotificationEnabled": true,
@@ -48,7 +52,11 @@
           "TimeType": 1,
           "IsHideDefault": false,
           "DefaultClassId": "",
-          "AttachedObjects": {},
+          "BreakName": "",
+          "ActionSet": null,
+          "AttachedObjects": {
+
+          },
           "IsActive": true
         },
         {
@@ -57,6 +65,8 @@
           "TimeType": 0,
           "IsHideDefault": false,
           "DefaultClassId": "",
+          "BreakName": "",
+          "ActionSet": null,
           "AttachedObjects": {
             "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
               "IsClassOnNotificationEnabled": true,
@@ -76,7 +86,11 @@
           "TimeType": 1,
           "IsHideDefault": false,
           "DefaultClassId": "",
-          "AttachedObjects": {},
+          "BreakName": "",
+          "ActionSet": null,
+          "AttachedObjects": {
+
+          },
           "IsActive": true
         },
         {
@@ -85,6 +99,8 @@
           "TimeType": 0,
           "IsHideDefault": false,
           "DefaultClassId": "",
+          "BreakName": "",
+          "ActionSet": null,
           "AttachedObjects": {
             "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
               "IsClassOnNotificationEnabled": true,
@@ -104,7 +120,11 @@
           "TimeType": 1,
           "IsHideDefault": false,
           "DefaultClassId": "",
-          "AttachedObjects": {},
+          "BreakName": "",
+          "ActionSet": null,
+          "AttachedObjects": {
+
+          },
           "IsActive": true
         },
         {
@@ -113,6 +133,8 @@
           "TimeType": 0,
           "IsHideDefault": false,
           "DefaultClassId": "",
+          "BreakName": "",
+          "ActionSet": null,
           "AttachedObjects": {
             "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
               "IsClassOnNotificationEnabled": true,
@@ -132,7 +154,11 @@
           "TimeType": 1,
           "IsHideDefault": false,
           "DefaultClassId": "",
-          "AttachedObjects": {},
+          "BreakName": "",
+          "ActionSet": null,
+          "AttachedObjects": {
+
+          },
           "IsActive": true
         },
         {
@@ -141,6 +167,8 @@
           "TimeType": 0,
           "IsHideDefault": false,
           "DefaultClassId": "",
+          "BreakName": "",
+          "ActionSet": null,
           "AttachedObjects": {
             "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
               "IsClassOnNotificationEnabled": true,
@@ -160,7 +188,11 @@
           "TimeType": 1,
           "IsHideDefault": false,
           "DefaultClassId": "",
-          "AttachedObjects": {},
+          "BreakName": "",
+          "ActionSet": null,
+          "AttachedObjects": {
+
+          },
           "IsActive": true
         },
         {
@@ -169,6 +201,8 @@
           "TimeType": 0,
           "IsHideDefault": false,
           "DefaultClassId": "",
+          "BreakName": "",
+          "ActionSet": null,
           "AttachedObjects": {
             "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
               "IsClassOnNotificationEnabled": true,
@@ -188,7 +222,11 @@
           "TimeType": 1,
           "IsHideDefault": false,
           "DefaultClassId": "",
-          "AttachedObjects": {},
+          "BreakName": "",
+          "ActionSet": null,
+          "AttachedObjects": {
+
+          },
           "IsActive": true
         },
         {
@@ -197,6 +235,8 @@
           "TimeType": 0,
           "IsHideDefault": false,
           "DefaultClassId": "",
+          "BreakName": "",
+          "ActionSet": null,
           "AttachedObjects": {
             "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
               "IsClassOnNotificationEnabled": true,
@@ -216,7 +256,11 @@
           "TimeType": 1,
           "IsHideDefault": false,
           "DefaultClassId": "",
-          "AttachedObjects": {},
+          "BreakName": "",
+          "ActionSet": null,
+          "AttachedObjects": {
+
+          },
           "IsActive": true
         },
         {
@@ -225,6 +269,8 @@
           "TimeType": 0,
           "IsHideDefault": false,
           "DefaultClassId": "",
+          "BreakName": "",
+          "ActionSet": null,
           "AttachedObjects": {
             "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
               "IsClassOnNotificationEnabled": true,
@@ -250,6 +296,6 @@
       "IsActive": true
     }
   },
-  "ClassPlans": {},
-  "Subjects": {}
+    "ClassPlans": {},
+    "Subjects": {}
 }
