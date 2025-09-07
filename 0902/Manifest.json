@@ -12,7 +12,7 @@
     "SubjectsSource": {
         "Value": "https://jiugulixiaoniu.github.io/jyez0902-classisland-jikong/0902/timelayouts.json",
         "Version": 2
-    }
+    },
     "PolicySource": {
         "Version": 1,
         "Value": "https://jiugulixiaoniu.github.io/jyez0902-classisland-jikong/0902/Policy.json"
