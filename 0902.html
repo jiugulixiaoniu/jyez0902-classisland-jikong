@@ -322,25 +322,36 @@ button:active {
       }
     }
 
-    function renderEditor() {
-      const map = {
-        'DisableProfileClassPlanEditing': '禁止编辑课表（DisableProfileClassPlanEditing）',
-        'DisableProfileTimeLayoutEditing': '禁止编辑时间表（DisableProfileTimeLayoutEditing）',
-        'DisableProfileSubjectsEditing': '禁止编辑科目（DisableProfileSubjectsEditing）',
-        'DisableProfileEditing': '禁止编辑档案（DisableProfileEditing）',
-        'DisableSettingsEditing': '禁止编辑应用设置（DisableSettingsEditing）',
-        'DisableSplashCustomize': '禁止自定义启动加载界面（DisableSplashCustomize）',
-        'DisableDebugMenu': '禁用调试菜单（DisableDebugMenu）',
-        'AllowExitManagement': '允许退出集控（AllowExitManagement）'
-      };
-      const ed = document.getElementById('editor');
-      ed.innerHTML = '';
-      for (const k in policy) {
-        const div = document.createElement('div');
-        div.className = 'json-item';
-        div.innerHTML = `<span>`;
-ed.appendChild(div);
-}
+   function renderEditor() {
+  const map = {
+    'DisableProfileClassPlanEditing': '禁止编辑课表',
+    'DisableProfileTimeLayoutEditing': '禁止编辑时间表',
+    'DisableProfileSubjectsEditing': '禁止编辑科目',
+    'DisableProfileEditing': '禁止编辑档案',
+    'DisableSettingsEditing': '禁止编辑应用设置',
+    'DisableSplashCustomize': '禁止自定义启动加载界面',
+    'DisableDebugMenu': '禁用调试菜单',
+    'AllowExitManagement': '允许退出集控'
+  };
+
+  const ed = document.getElementById('editor');
+  ed.innerHTML = '';
+
+  for (const k in policy) {
+    const div = document.createElement('div');
+    div.className = 'json-item';
+
+    const label = document.createElement('span');
+    label.textContent = map[k] || k;
+
+    const toggle = document.createElement('div');
+    toggle.className = 'toggle' + (policy[k] ? ' on' : '');
+    toggle.onclick = () => toggleKey(k, toggle);
+
+    div.appendChild(label);
+    div.appendChild(toggle);
+    ed.appendChild(div);
+  }
 }
 function toggleKey(k, el) {
   policy[k] = !policy[k];
