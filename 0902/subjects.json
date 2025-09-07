@@ -1,74 +1,122 @@
 {
-  "3bbed0c0-bcf3-4dfe-a78d-5da9b02cf8bd": {
-    "Name": "英语",
-    "Initial": "英",
-    "TeacherName": "杨老师",
-    "IsOutDoor": false,
-    "AttachedObjects": {},
-    "IsActive": true
+    "Name": "",
+    "TimeLayouts": {},
+    "ClassPlans": {},
+     "Subjects": {
+    "3bbed0c0-bcf3-4dfe-a78d-5da9b02cf8bd": {
+      "Name": "英语",
+      "Initial": "英",
+      "TeacherName": "杨老师",
+      "IsOutDoor": false,
+      "AttachedObjects": {
+
+      },
+      "IsActive": true
+    },
+    "1154d452-5ede-4194-b4dd-cb40c956c8ed": {
+      "Name": "数学",
+      "Initial": "数",
+      "TeacherName": "陈老师",
+      "IsOutDoor": false,
+      "AttachedObjects": {
+
+      },
+      "IsActive": true
+    },
+    "97d0bf3f-137f-4f8a-87d6-ff387063bbd3": {
+      "Name": "语文",
+      "Initial": "语",
+      "TeacherName": "邱老师",
+      "IsOutDoor": false,
+      "AttachedObjects": {
+
+      },
+      "IsActive": true
+    },
+    "9f0d71b7-b4da-4040-a3d5-64da7573c6dd": {
+      "Name": "道法",
+      "Initial": "道",
+      "TeacherName": "黄老师",
+      "IsOutDoor": false,
+      "AttachedObjects": {
+
+      },
+      "IsActive": true
+    },
+    "44ec22d3-3dde-40e6-8eb7-a1f4cd378a04": {
+      "Name": "历史",
+      "Initial": "历",
+      "TeacherName": "童老师",
+      "IsOutDoor": false,
+      "AttachedObjects": {
+
+      },
+      "IsActive": true
+    },
+    "a4a76e77-29d8-4103-882c-2f4c9d1e8077": {
+      "Name": "物理",
+      "Initial": "物",
+      "TeacherName": "童老师",
+      "IsOutDoor": false,
+      "AttachedObjects": {
+
+      },
+      "IsActive": true
+    },
+    "d18e9906-0210-4f00-9dd6-b919f0dd8287": {
+      "Name": "化学",
+      "Initial": "化",
+      "TeacherName": "徐老师",
+      "IsOutDoor": false,
+      "AttachedObjects": {
+
+      },
+      "IsActive": true
+    },
+    "0ed2307b-4d9b-48fa-97ed-94bd2213c84e": {
+      "Name": "体育",
+      "Initial": "体",
+      "TeacherName": "章老师",
+      "IsOutDoor": false,
+      "AttachedObjects": {
+
+      },
+      "IsActive": true
+    },
+    "cf251cd8-2aab-4aa1-8211-50f4e6919a3d": {
+      "Name": "班会",
+      "Initial": "班",
+      "TeacherName": "班主任",
+      "IsOutDoor": false,
+      "AttachedObjects": {
+
+      },
+      "IsActive": true
+    }
   },
-  "1154d452-5ede-4194-b4dd-cb40c956c8ed": {
-    "Name": "数学",
-    "Initial": "数",
-    "TeacherName": "陈老师",
-    "IsOutDoor": false,
-    "AttachedObjects": {},
-    "IsActive": true
+  "IsOverlayClassPlanEnabled": false,
+  "OverlayClassPlanId": null,
+  "TempClassPlanId": null,
+  "TempClassPlanSetupTime": "2025-09-07T16:13:15.3670178+08:00",
+  "ClassPlanGroups": {
+    "acaf4ef0-e261-4262-b941-34ea93cb4369": {
+      "Name": "默认",
+      "IsGlobal": false,
+      "IsActive": false
+    },
+    "00000000-0000-0000-0000-000000000000": {
+      "Name": "全局课表群",
+      "IsGlobal": true,
+      "IsActive": false
+    }
   },
-  "97d0bf3f-137f-4f8a-87d6-ff387063bbd3": {
-    "Name": "语文",
-    "Initial": "语",
-    "TeacherName": "邱老师",
-    "IsOutDoor": false,
-    "AttachedObjects": {},
-    "IsActive": true
+  "SelectedClassPlanGroupId": "acaf4ef0-e261-4262-b941-34ea93cb4369",
+  "TempClassPlanGroupId": null,
+  "TempClassPlanGroupExpireTime": "2025-09-07T16:13:15.3670223+08:00",
+  "IsTempClassPlanGroupEnabled": false,
+  "TempClassPlanGroupType": 1,
+  "Id": "5d5b28a1-b8c6-476c-9303-763dab7cd620",
+  "OrderedSchedules": {
+
   },
-  "9f0d71b7-b4da-4040-a3d5-64da7573c6dd": {
-    "Name": "道法",
-    "Initial": "道",
-    "TeacherName": "黄老师",
-    "IsOutDoor": false,
-    "AttachedObjects": {},
-    "IsActive": true
-  },
-  "44ec22d3-3dde-40e6-8eb7-a1f4cd378a04": {
-    "Name": "历史",
-    "Initial": "历",
-    "TeacherName": "童老师",
-    "IsOutDoor": false,
-    "AttachedObjects": {},
-    "IsActive": true
-  },
-  "a4a76e77-29d8-4103-882c-2f4c9d1e8077": {
-    "Name": "物理",
-    "Initial": "物",
-    "TeacherName": "童老师",
-    "IsOutDoor": false,
-    "AttachedObjects": {},
-    "IsActive": true
-  },
-  "d18e9906-0210-4f00-9dd6-b919f0dd8287": {
-    "Name": "化学",
-    "Initial": "化",
-    "TeacherName": "徐老师",
-    "IsOutDoor": false,
-    "AttachedObjects": {},
-    "IsActive": true
-  },
-  "0ed2307b-4d9b-48fa-97ed-94bd2213c84e": {
-    "Name": "体育",
-    "Initial": "体",
-    "TeacherName": "章老师",
-    "IsOutDoor": true,
-    "AttachedObjects": {},
-    "IsActive": true
-  },
-  "cf251cd8-2aab-4aa1-8211-50f4e6919a3d": {
-    "Name": "班会",
-    "Initial": "班",
-    "TeacherName": "班主任",
-    "IsOutDoor": false,
-    "AttachedObjects": {},
-    "IsActive": true
-  }
 }
