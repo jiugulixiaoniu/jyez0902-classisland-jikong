@@ -1,5 +1,5 @@
 {
   "ManagementServerKind": 0,
-  "ManifestUrlTemplate": "https://jyez0902-classisland-jikong.io/{ID}ManagementPreset.json",
+  "ManifestUrlTemplate": "https://jyez0902-classisland-jikong.io/{ID}/Manifest.json",
   "Organization": "JGL Studio"
 }
