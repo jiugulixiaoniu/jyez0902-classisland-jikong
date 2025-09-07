@@ -1,0 +1,244 @@
+{
+  "Version": "1.0",
+  "Value": {
+    "id": "0902",
+    "timeSlots": [
+      {
+        "id": "早读",
+        "start": "07:30",
+        "end": "08:00"
+      },
+      {
+        "id": "第一节",
+        "start": "08:00",
+        "end": "08:45"
+      },
+      {
+        "id": "第二节",
+        "start": "09:15",
+        "end": "10:00"
+      },
+      {
+        "id": "第三节",
+        "start": "10:15",
+        "end": "11:00"
+      },
+      {
+        "id": "第四节",
+        "start": "11:15",
+        "end": "12:05"
+      },
+      {
+        "id": "第五节",
+        "start": "14:30",
+        "end": "15:15"
+      },
+      {
+        "id": "第六节",
+        "start": "15:30",
+        "end": "16:15"
+      },
+      {
+        "id": "第七节",
+        "start": "16:30",
+        "end": "17:15"
+      },
+      {
+        "id": "第八节",
+        "start": "17:30",
+        "end": "18:15"
+      }
+    ],
+    "classPlan": [
+      {
+        "day": "周一",
+        "entries": [
+          {
+            "timeSlotId": "早读",
+            "subject": "英语"
+          },
+          {
+            "timeSlotId": "第一节",
+            "subject": "英语"
+          },
+          {
+            "timeSlotId": "第二节",
+            "subject": "数学"
+          },
+          {
+            "timeSlotId": "第三节",
+            "subject": "语文"
+          },
+          {
+            "timeSlotId": "第四节",
+            "subject": "道法"
+          },
+          {
+            "timeSlotId": "第五节",
+            "subject": "化学"
+          },
+          {
+            "timeSlotId": "第六节",
+            "subject": "物理"
+          },
+          {
+            "timeSlotId": "第七节",
+            "subject": "体育"
+          }
+        ]
+      },
+      {
+        "day": "周二",
+        "entries": [
+          {
+            "timeSlotId": "早读",
+            "subject": "语文"
+          },
+          {
+            "timeSlotId": "第一节",
+            "subject": "语文"
+          },
+          {
+            "timeSlotId": "第二节",
+            "subject": "数学"
+          },
+          {
+            "timeSlotId": "第三节",
+            "subject": "历史"
+          },
+          {
+            "timeSlotId": "第四节",
+            "subject": "体育"
+          },
+          {
+            "timeSlotId": "第五节",
+            "subject": "物理"
+          },
+          {
+            "timeSlotId": "第六节",
+            "subject": "英语"
+          },
+          {
+            "timeSlotId": "第七节",
+            "subject": "英语"
+          }
+        ]
+      },
+      {
+        "day": "周三",
+        "entries": [
+          {
+            "timeSlotId": "早读",
+            "subject": "英语"
+          },
+          {
+            "timeSlotId": "第一节",
+            "subject": "英语"
+          },
+          {
+            "timeSlotId": "第二节",
+            "subject": "道法"
+          },
+          {
+            "timeSlotId": "第三节",
+            "subject": "语文"
+          },
+          {
+            "timeSlotId": "第四节",
+            "subject": "语文"
+          },
+          {
+            "timeSlotId": "第五节",
+            "subject": "数学"
+          },
+          {
+            "timeSlotId": "第六节",
+            "subject": "物理"
+          },
+          {
+            "timeSlotId": "第七节",
+            "subject": "化学"
+          }
+        ]
+      },
+      {
+        "day": "周四",
+        "entries": [
+          {
+            "timeSlotId": "早读",
+            "subject": "语文"
+          },
+          {
+            "timeSlotId": "第一节",
+            "subject": "英语"
+          },
+          {
+            "timeSlotId": "第二节",
+            "subject": "语文"
+          },
+          {
+            "timeSlotId": "第三节",
+            "subject": "数学"
+          },
+          {
+            "timeSlotId": "第四节",
+            "subject": "道法"
+          },
+          {
+            "timeSlotId": "第五节",
+            "subject": "体育"
+          },
+          {
+            "timeSlotId": "第六节",
+            "subject": "历史"
+          },
+          {
+            "timeSlotId": "第七节",
+            "subject": "化学"
+          }
+        ]
+      },
+      {
+        "day": "周五",
+        "entries": [
+          {
+            "timeSlotId": "早读",
+            "subject": "英语"
+          },
+          {
+            "timeSlotId": "第一节",
+            "subject": "数学"
+          },
+          {
+            "timeSlotId": "第二节",
+            "subject": "数学"
+          },
+          {
+            "timeSlotId": "第三节",
+            "subject": "英语"
+          },
+          {
+            "timeSlotId": "第四节",
+            "subject": "历史"
+          },
+          {
+            "timeSlotId": "第五节",
+            "subject": "语文"
+          },
+          {
+            "timeSlotId": "第六节",
+            "subject": "物理"
+          },
+          {
+            "timeSlotId": "第七节",
+            "subject": "化学"
+          },
+          {
+            "timeSlotId": "第八节",
+            "subject": "班会"
+          }
+        ]
+      }
+    ]
+  }
+}
