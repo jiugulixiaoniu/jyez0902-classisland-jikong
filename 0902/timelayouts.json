@@ -1,306 +1,255 @@
 {
-  "d0ed9d46-df11-468b-82de-629a0a7464d6": {
-    "Name": "每日",
-    "Layouts": [
-      {
-        "StartSecond": "2025-09-07T07:30:00+08:00",
-        "EndSecond": "2025-09-07T08:00:00+08:00",
-        "TimeType": 0,
-        "IsHideDefault": false,
-        "DefaultClassId": "3bbed0c0-bcf3-4dfe-a78d-5da9b02cf8bd",
-        "BreakName": "",
-        "ActionSet": null,
-        "AttachedObjects": {
-          "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
-            "IsClassOnNotificationEnabled": true,
-            "IsClassOnPreparingNotificationEnabled": true,
-            "IsClassOffNotificationEnabled": true,
-            "ClassPreparingDeltaTime": 60,
-            "ClassOnPreparingText": "准备上课，请回到座位并保持安静，做好上课准备。",
-            "OutdoorClassOnPreparingText": "下节课为户外课程，请合理规划时间，做好上课准备。",
-            "ClassOnPreparingMaskText": "即将上课",
-            "OutdoorClassOnPreparingMaskText": "即将上课",
-            "ClassOnMaskText": "上课",
-            "ClassOffMaskText": "课间休息",
-            "ClassOffOverlayText": "",
-            "IsAttachSettingsEnabled": true,
-            "IsActive": false
+  "Name": "",
+  "TimeLayouts": {
+    "d0ed9d46-df11-468b-82de-629a0a7464d6": {
+      "Name": "每日",
+      "Layouts": [
+        {
+          "StartSecond": "2025-09-07T07:30:00+08:00",
+          "EndSecond": "2025-09-07T08:00:00+08:00",
+          "TimeType": 0,
+          "IsHideDefault": false,
+          "DefaultClassId": "3bbed0c0-bcf3-4dfe-a78d-5da9b02cf8bd",
+          "AttachedObjects": {
+            "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
+              "IsClassOnNotificationEnabled": true,
+              "IsClassOnPreparingNotificationEnabled": true,
+              "IsClassOffNotificationEnabled": true,
+              "ClassPreparingDeltaTime": 60,
+              "ClassOnPreparingText": "准备上课，请回到座位并保持安静，做好上课准备。",
+              "IsAttachSettingsEnabled": true,
+              "IsActive": false
+            }
           },
-          "58e5b69a-764a-472b-bcf7-003b6a8c7fdf": {
-            "IsAttachSettingsEnabled": false,
-            "ShowExtraInfoOnTimePoint": true,
-            "ExtraInfoType": 0,
-            "IsCountdownEnabled": true,
-            "CountdownSeconds": 60,
-            "ExtraInfo4ShowSecondsSeconds": 0,
-            "ScheduleSpacing": 1,
-            "ShowCurrentLessonOnlyOnClass": false,
-            "IsNonExactCountdownEnabled": false,
-            "IsActive": false
+          "IsActive": true
+        },
+        {
+          "StartSecond": "2025-09-07T08:00:00+08:00",
+          "EndSecond": "2025-09-07T08:45:00+08:00",
+          "TimeType": 0,
+          "IsHideDefault": false,
+          "DefaultClassId": "",
+          "AttachedObjects": {
+            "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
+              "IsClassOnNotificationEnabled": true,
+              "IsClassOnPreparingNotificationEnabled": true,
+              "IsClassOffNotificationEnabled": true,
+              "ClassPreparingDeltaTime": 60,
+              "ClassOnPreparingText": "准备上课，请回到座位并保持安静，做好上课准备。",
+              "IsAttachSettingsEnabled": false,
+              "IsActive": false
+            }
           },
-          "7625de96-38aa-4b71-b478-3f156dd9458d": {
-            "AlertShowMode": 2,
-            "ForecastShowMode": 2,
-            "IsAttachSettingsEnabled": true,
-            "IsActive": false
-          }
+          "IsActive": true
         },
-        "IsActive": true
-      },
-      {
-        "StartSecond": "2025-09-07T08:00:00+08:00",
-        "EndSecond": "2025-09-07T08:45:00+08:00",
-        "TimeType": 0,
-        "IsHideDefault": false,
-        "DefaultClassId": "",
-        "BreakName": "",
-        "ActionSet": null,
-        "AttachedObjects": {
-          "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
-            "IsClassOnNotificationEnabled": true,
-            "IsClassOnPreparingNotificationEnabled": true,
-            "IsClassOffNotificationEnabled": true,
-            "ClassPreparingDeltaTime": 60,
-            "ClassOnPreparingText": "准备上课，请回到座位并保持安静，做好上课准备。",
-            "IsAttachSettingsEnabled": false,
-            "IsActive": false
-          }
+        {
+          "StartSecond": "2025-09-07T08:45:00+08:00",
+          "EndSecond": "2025-09-07T09:15:00+08:00",
+          "TimeType": 1,
+          "IsHideDefault": false,
+          "DefaultClassId": "",
+          "AttachedObjects": {},
+          "IsActive": true
         },
-        "IsActive": true
-      },
-      {
-        "StartSecond": "2025-09-07T08:45:00+08:00",
-        "EndSecond": "2025-09-07T09:15:00+08:00",
-        "TimeType": 1,
-        "IsHideDefault": false,
-        "DefaultClassId": "",
-        "BreakName": "",
-        "ActionSet": null,
-        "AttachedObjects": {},
-        "IsActive": true
-      },
-      {
-        "StartSecond": "2025-09-07T09:15:00+08:00",
-        "EndSecond": "2025-09-07T10:00:00+08:00",
-        "TimeType": 0,
-        "IsHideDefault": false,
-        "DefaultClassId": "",
-        "BreakName": "",
-        "ActionSet": null,
-        "AttachedObjects": {
-          "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
-            "IsClassOnNotificationEnabled": true,
-            "IsClassOnPreparingNotificationEnabled": true,
-            "IsClassOffNotificationEnabled": true,
-            "ClassPreparingDeltaTime": 60,
-            "ClassOnPreparingText": "准备上课，请回到座位并保持安静，做好上课准备。",
-            "IsAttachSettingsEnabled": true,
-            "IsActive": false
-          }
+        {
+          "StartSecond": "2025-09-07T09:15:00+08:00",
+          "EndSecond": "2025-09-07T10:00:00+08:00",
+          "TimeType": 0,
+          "IsHideDefault": false,
+          "DefaultClassId": "",
+          "AttachedObjects": {
+            "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
+              "IsClassOnNotificationEnabled": true,
+              "IsClassOnPreparingNotificationEnabled": true,
+              "IsClassOffNotificationEnabled": true,
+              "ClassPreparingDeltaTime": 60,
+              "ClassOnPreparingText": "准备上课，请回到座位并保持安静，做好上课准备。",
+              "IsAttachSettingsEnabled": true,
+              "IsActive": false
+            }
+          },
+          "IsActive": true
         },
-        "IsActive": true
-      },
-      {
-        "StartSecond": "2025-09-07T10:00:00+08:00",
-        "EndSecond": "2025-09-07T10:15:00+08:00",
-        "TimeType": 1,
-        "IsHideDefault": false,
-        "DefaultClassId": "",
-        "BreakName": "",
-        "ActionSet": null,
-        "AttachedObjects": {},
-        "IsActive": true
-      },
-      {
-        "StartSecond": "2025-09-07T10:15:00+08:00",
-        "EndSecond": "2025-09-07T11:00:00+08:00",
-        "TimeType": 0,
-        "IsHideDefault": false,
-        "DefaultClassId": "",
-        "BreakName": "",
-        "ActionSet": null,
-        "AttachedObjects": {
-          "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
-            "IsClassOnNotificationEnabled": true,
-            "IsClassOnPreparingNotificationEnabled": true,
-            "IsClassOffNotificationEnabled": true,
-            "ClassPreparingDeltaTime": 60,
-            "ClassOnPreparingText": "准备上课，请回到座位并保持安静，做好上课准备。",
-            "IsAttachSettingsEnabled": true,
-            "IsActive": false
-          }
+        {
+          "StartSecond": "2025-09-07T10:00:00+08:00",
+          "EndSecond": "2025-09-07T10:15:00+08:00",
+          "TimeType": 1,
+          "IsHideDefault": false,
+          "DefaultClassId": "",
+          "AttachedObjects": {},
+          "IsActive": true
         },
-        "IsActive": true
-      },
-      {
-        "StartSecond": "2025-09-07T11:00:00+08:00",
-        "EndSecond": "2025-09-07T11:15:00+08:00",
-        "TimeType": 1,
-        "IsHideDefault": false,
-        "DefaultClassId": "",
-        "BreakName": "",
-        "ActionSet": null,
-        "AttachedObjects": {},
-        "IsActive": true
-      },
-      {
-        "StartSecond": "2025-09-07T11:15:00+08:00",
-        "EndSecond": "2025-09-07T12:05:00+08:00",
-        "TimeType": 0,
-        "IsHideDefault": false,
-        "DefaultClassId": "",
-        "BreakName": "",
-        "ActionSet": null,
-        "AttachedObjects": {
-          "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
-            "IsClassOnNotificationEnabled": true,
-            "IsClassOnPreparingNotificationEnabled": true,
-            "IsClassOffNotificationEnabled": true,
-            "ClassPreparingDeltaTime": 60,
-            "ClassOnPreparingText": "准备上课，请回到座位并保持安静，做好上课准备。",
-            "IsAttachSettingsEnabled": true,
-            "IsActive": false
-          }
+        {
+          "StartSecond": "2025-09-07T10:15:00+08:00",
+          "EndSecond": "2025-09-07T11:00:00+08:00",
+          "TimeType": 0,
+          "IsHideDefault": false,
+          "DefaultClassId": "",
+          "AttachedObjects": {
+            "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
+              "IsClassOnNotificationEnabled": true,
+              "IsClassOnPreparingNotificationEnabled": true,
+              "IsClassOffNotificationEnabled": true,
+              "ClassPreparingDeltaTime": 60,
+              "ClassOnPreparingText": "准备上课，请回到座位并保持安静，做好上课准备。",
+              "IsAttachSettingsEnabled": true,
+              "IsActive": false
+            }
+          },
+          "IsActive": true
         },
-        "IsActive": true
-      },
-      {
-        "StartSecond": "2025-09-07T12:05:00+08:00",
-        "EndSecond": "2025-09-07T14:30:00+08:00",
-        "TimeType": 1,
-        "IsHideDefault": false,
-        "DefaultClassId": "",
-        "BreakName": "",
-        "ActionSet": null,
-        "AttachedObjects": {},
-        "IsActive": true
-      },
-      {
-        "StartSecond": "2025-09-07T14:30:00+08:00",
-        "EndSecond": "2025-09-07T15:15:00+08:00",
-        "TimeType": 0,
-        "IsHideDefault": false,
-        "DefaultClassId": "",
-        "BreakName": "",
-        "ActionSet": null,
-        "AttachedObjects": {
-          "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
-            "IsClassOnNotificationEnabled": true,
-            "IsClassOnPreparingNotificationEnabled": true,
-            "IsClassOffNotificationEnabled": true,
-            "ClassPreparingDeltaTime": 60,
-            "ClassOnPreparingText": "准备上课，请回到座位并保持安静，做好上课准备。",
-            "IsAttachSettingsEnabled": true,
-            "IsActive": false
-          }
+        {
+          "StartSecond": "2025-09-07T11:00:00+08:00",
+          "EndSecond": "2025-09-07T11:15:00+08:00",
+          "TimeType": 1,
+          "IsHideDefault": false,
+          "DefaultClassId": "",
+          "AttachedObjects": {},
+          "IsActive": true
         },
-        "IsActive": true
-      },
-      {
-        "StartSecond": "2025-09-07T15:15:00+08:00",
-        "EndSecond": "2025-09-07T15:30:00+08:00",
-        "TimeType": 1,
-        "IsHideDefault": false,
-        "DefaultClassId": "",
-        "BreakName": "",
-        "ActionSet": null,
-        "AttachedObjects": {},
-        "IsActive": true
-      },
-      {
-        "StartSecond": "2025-09-07T15:30:00+08:00",
-        "EndSecond": "2025-09-07T16:15:00+08:00",
-        "TimeType": 0,
-        "IsHideDefault": false,
-        "DefaultClassId": "",
-        "BreakName": "",
-        "ActionSet": null,
-        "AttachedObjects": {
-          "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
-            "IsClassOnNotificationEnabled": true,
-            "IsClassOnPreparingNotificationEnabled": true,
-            "IsClassOffNotificationEnabled": true,
-            "ClassPreparingDeltaTime": 60,
-            "ClassOnPreparingText": "准备上课，请回到座位并保持安静，做好上课准备。",
-            "IsAttachSettingsEnabled": true,
-            "IsActive": false
-          }
+        {
+          "StartSecond": "2025-09-07T11:15:00+08:00",
+          "EndSecond": "2025-09-07T12:05:00+08:00",
+          "TimeType": 0,
+          "IsHideDefault": false,
+          "DefaultClassId": "",
+          "AttachedObjects": {
+            "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
+              "IsClassOnNotificationEnabled": true,
+              "IsClassOnPreparingNotificationEnabled": true,
+              "IsClassOffNotificationEnabled": true,
+              "ClassPreparingDeltaTime": 60,
+              "ClassOnPreparingText": "准备上课，请回到座位并保持安静，做好上课准备。",
+              "IsAttachSettingsEnabled": true,
+              "IsActive": false
+            }
+          },
+          "IsActive": true
         },
-        "IsActive": true
-      },
-      {
-        "StartSecond": "2025-09-07T16:15:00+08:00",
-        "EndSecond": "2025-09-07T16:30:00+08:00",
-        "TimeType": 1,
-        "IsHideDefault": false,
-        "DefaultClassId": "",
-        "BreakName": "",
-        "ActionSet": null,
-        "AttachedObjects": {},
-        "IsActive": true
-      },
-      {
-        "StartSecond": "2025-09-07T16:30:00+08:00",
-        "EndSecond": "2025-09-07T17:15:00+08:00",
-        "TimeType": 0,
-        "IsHideDefault": false,
-        "DefaultClassId": "",
-        "BreakName": "",
-        "ActionSet": null,
-        "AttachedObjects": {
-          "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
-            "IsClassOnNotificationEnabled": true,
-            "IsClassOnPreparingNotificationEnabled": true,
-            "IsClassOffNotificationEnabled": true,
-            "ClassPreparingDeltaTime": 60,
-            "ClassOnPreparingText": "准备上课，请回到座位并保持安静，做好上课准备。",
-            "IsAttachSettingsEnabled": true,
-            "IsActive": false
-          }
+        {
+          "StartSecond": "2025-09-07T12:05:00+08:00",
+          "EndSecond": "2025-09-07T14:30:00+08:00",
+          "TimeType": 1,
+          "IsHideDefault": false,
+          "DefaultClassId": "",
+          "AttachedObjects": {},
+          "IsActive": true
         },
-        "IsActive": true
-      },
-      {
-        "StartSecond": "2025-09-07T17:15:00+08:00",
-        "EndSecond": "2025-09-07T17:30:00+08:00",
-        "TimeType": 1,
-        "IsHideDefault": false,
-        "DefaultClassId": "",
-        "BreakName": "",
-        "ActionSet": null,
-        "AttachedObjects": {},
-        "IsActive": true
-      },
-      {
-        "StartSecond": "2025-09-07T17:30:00+08:00",
-        "EndSecond": "2025-09-07T18:15:00+08:00",
-        "TimeType": 0,
-        "IsHideDefault": false,
-        "DefaultClassId": "",
-        "BreakName": "",
-        "ActionSet": null,
-        "AttachedObjects": {
-          "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
-            "IsClassOnNotificationEnabled": true,
-            "IsClassOnPreparingNotificationEnabled": true,
-            "IsClassOffNotificationEnabled": true,
-            "ClassPreparingDeltaTime": 60,
-            "ClassOnPreparingText": "准备上课，请回到座位并保持安静，做好上课准备。",
-            "IsAttachSettingsEnabled": true,
-            "IsActive": false
-          }
+        {
+          "StartSecond": "2025-09-07T14:30:00+08:00",
+          "EndSecond": "2025-09-07T15:15:00+08:00",
+          "TimeType": 0,
+          "IsHideDefault": false,
+          "DefaultClassId": "",
+          "AttachedObjects": {
+            "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
+              "IsClassOnNotificationEnabled": true,
+              "IsClassOnPreparingNotificationEnabled": true,
+              "IsClassOffNotificationEnabled": true,
+              "ClassPreparingDeltaTime": 60,
+              "ClassOnPreparingText": "准备上课，请回到座位并保持安静，做好上课准备。",
+              "IsAttachSettingsEnabled": true,
+              "IsActive": false
+            }
+          },
+          "IsActive": true
         },
-        "IsActive": true
-      }
-    ],
-    "AttachedObjects": {
-      "8fbc3a26-6d20-44dd-b895-b9411e3ddc51": {
-        "IsEnabled": true,
-        "NotificationMsg": "今天的课程已结束，请同学们有序离开。",
-        "IsAttachSettingsEnabled": false,
-        "IsActive": false
-      }
-    },
-    "IsActive": true
-  }
+        {
+          "StartSecond": "2025-09-07T15:15:00+08:00",
+          "EndSecond": "2025-09-07T15:30:00+08:00",
+          "TimeType": 1,
+          "IsHideDefault": false,
+          "DefaultClassId": "",
+          "AttachedObjects": {},
+          "IsActive": true
+        },
+        {
+          "StartSecond": "2025-09-07T15:30:00+08:00",
+          "EndSecond": "2025-09-07T16:15:00+08:00",
+          "TimeType": 0,
+          "IsHideDefault": false,
+          "DefaultClassId": "",
+          "AttachedObjects": {
+            "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
+              "IsClassOnNotificationEnabled": true,
+              "IsClassOnPreparingNotificationEnabled": true,
+              "IsClassOffNotificationEnabled": true,
+              "ClassPreparingDeltaTime": 60,
+              "ClassOnPreparingText": "准备上课，请回到座位并保持安静，做好上课准备。",
+              "IsAttachSettingsEnabled": true,
+              "IsActive": false
+            }
+          },
+          "IsActive": true
+        },
+        {
+          "StartSecond": "2025-09-07T16:15:00+08:00",
+          "EndSecond": "2025-09-07T16:30:00+08:00",
+          "TimeType": 1,
+          "IsHideDefault": false,
+          "DefaultClassId": "",
+          "AttachedObjects": {},
+          "IsActive": true
+        },
+        {
+          "StartSecond": "2025-09-07T16:30:00+08:00",
+          "EndSecond": "2025-09-07T17:15:00+08:00",
+          "TimeType": 0,
+          "IsHideDefault": false,
+          "DefaultClassId": "",
+          "AttachedObjects": {
+            "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
+              "IsClassOnNotificationEnabled": true,
+              "IsClassOnPreparingNotificationEnabled": true,
+              "IsClassOffNotificationEnabled": true,
+              "ClassPreparingDeltaTime": 60,
+              "ClassOnPreparingText": "准备上课，请回到座位并保持安静，做好上课准备。",
+              "IsAttachSettingsEnabled": true,
+              "IsActive": false
+            }
+          },
+          "IsActive": true
+        },
+        {
+          "StartSecond": "2025-09-07T17:15:00+08:00",
+          "EndSecond": "2025-09-07T17:30:00+08:00",
+          "TimeType": 1,
+          "IsHideDefault": false,
+          "DefaultClassId": "",
+          "AttachedObjects": {},
+          "IsActive": true
+        },
+        {
+          "StartSecond": "2025-09-07T17:30:00+08:00",
+          "EndSecond": "2025-09-07T18:15:00+08:00",
+          "TimeType": 0,
+          "IsHideDefault": false,
+          "DefaultClassId": "",
+          "AttachedObjects": {
+            "08f0d9c3-c770-4093-a3d0-02f3d90c24bc": {
+              "IsClassOnNotificationEnabled": true,
+              "IsClassOnPreparingNotificationEnabled": true,
+              "IsClassOffNotificationEnabled": true,
+              "ClassPreparingDeltaTime": 60,
+              "ClassOnPreparingText": "准备上课，请回到座位并保持安静，做好上课准备。",
+              "IsAttachSettingsEnabled": true,
+              "IsActive": false
+            }
+          },
+          "IsActive": true
+        }
+      ],
+      "AttachedObjects": {
+        "8fbc3a26-6d20-44dd-b895-b9411e3ddc51": {
+          "IsEnabled": true,
+          "NotificationMsg": "今天的课程已结束，请同学们有序离开。",
+          "IsAttachSettingsEnabled": false,
+          "IsActive": false
+        }
+      },
+      "IsActive": true
+    }
+  },
+  "ClassPlans": {},
+  "Subjects": {}
 }
