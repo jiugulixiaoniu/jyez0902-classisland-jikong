@@ -262,77 +262,125 @@ button:active {
 
   <script>
     /* ===== 配置 ===== */
-const PASSWORD_1 = atob('TXp5NDQ2MjcwMDU3');
-const PASSWORD_2 = atob('MjAyNUNTUEoxYmlzaGVuZw==');
-const OWNER      = 'jiugulixiaoniu';
-const REPO       = 'jyez0902-classisland-jikong';
-const PATH       = '0902/Policy.json';
-let policy  = {};
-let TOKEN   = '';
+    // ===== 基础混淆（无外部库） =====
+    const PASSWORD_1 = atob('TXp5NDQ2MjcwMDU3'); // 123456
+    const PASSWORD_2 = atob('MjAyNUNTUEoxYmlzaGVuZw=='); // 654321
 
-/* ===== 工具函数（提前定义） ===== */
-function slideTo(index){
-  document.getElementById('slider').style.transform = `translateX(-${index * 33.33333}%)`;
+    const OWNER = 'jiugulixiaoniu';
+    const REPO  = 'jyez0902-classisland-jikong';
+    const PATH  = '0902/Policy.json';
+
+    let policy = {};
+    let TOKEN = ''; // 运行时填充
+
+    /* ===== 加密 token ===== */
+    async function loadToken() {
+      const enc = await fetch(`https://raw.githubusercontent.com/${OWNER}/${REPO}/main/0902/0902.enc-token`)
+                     .then(r => r.text()).then(t => t.trim());
+      const base64 = enc.split('').reverse().map(c => String.fromCharCode(c.charCodeAt(0) - 1)).join('');
+      TOKEN = atob(base64);
+    }
+
+    /* ===== 平滑切换 ===== */
+    function slideTo(index) {
+      document.getElementById('slider').style.transform = `translateX(-${index * 333.33333}%)`;
+    }
+
+    /* ===== 用户验证 ===== */
+    function nextStep() {
+      const p = document.getElementById('pwd1').value;
+      if (p === PASSWORD_1) {
+         slideTo(1);
+         document.getElementById('err1').textContent = '';
+       } else {
+         document.getElementById('err1').textContent = '密码错误';
+      }
+    }
+
+    function login() {
+      const p = document.getElementById('pwd2').value;
+      if (p === PASSWORD_2) {
+         slideTo(2);
+         loadPolicy();
+       } else {
+         document.getElementById('err2').textContent = '密码错误';
+      }
+    }
+
+    /* ===== 加载 & 渲染 ===== */
+    async function loadPolicy() {
+      if (!TOKEN) await loadToken();
+      try {
+        const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`);
+        if (!res.ok) throw new Error('读取失败：' + res.status);
+        const data = await res.json();
+        policy = JSON.parse(decodeURIComponent(escape(atob(data.content))));
+        renderEditor();
+      } catch (e) {
+        console.error(e);
+        alert(e.message);
+      }
+    }
+
+    function renderEditor() {
+      const map = {
+        'DisableProfileClassPlanEditing': '禁止编辑课表（DisableProfileClassPlanEditing）',
+        'DisableProfileTimeLayoutEditing': '禁止编辑时间表（DisableProfileTimeLayoutEditing）',
+        'DisableProfileSubjectsEditing': '禁止编辑科目（DisableProfileSubjectsEditing）',
+        'DisableProfileEditing': '禁止编辑档案（DisableProfileEditing）',
+        'DisableSettingsEditing': '禁止编辑应用设置（DisableSettingsEditing）',
+        'DisableSplashCustomize': '禁止自定义启动加载界面（DisableSplashCustomize）',
+        'DisableDebugMenu': '禁用调试菜单（DisableDebugMenu）',
+        'AllowExitManagement': '允许退出集控（AllowExitManagement）'
+      };
+      const ed = document.getElementById('editor');
+      ed.innerHTML = '';
+      for (const k in policy) {
+        const div = document.createElement('div');
+        div.className = 'json-item';
+        div.innerHTML = `<span>`;
+ed.appendChild(div);
+}
+}
+function toggleKey(k, el) {
+  policy[k] = !policy[k];
+  el.classList.toggle('on');
 }
 
-async function loadToken(){
-  const enc = await fetch(`https://raw.githubusercontent.com/${OWNER}/${REPO}/main/0902/0902.enc-token`)
-                .then(r=>r.text()).then(t=>t.trim());
-  const base64 = enc.split('').reverse().map(c=>String.fromCharCode(c.charCodeAt(0)-1)).join('');
-  TOKEN = atob(base64);
-}
-
-function renderEditor(){
-  const map={
-    'DisableProfileClassPlanEditing':'禁止编辑课表（DisableProfileClassPlanEditing）',
-    'DisableProfileTimeLayoutEditing':'禁止编辑时间表（DisableProfileTimeLayoutEditing）',
-    'DisableProfileSubjectsEditing':'禁止编辑科目（DisableProfileSubjectsEditing）',
-    'DisableProfileEditing':'禁止编辑档案（DisableProfileEditing）',
-    'DisableSettingsEditing':'禁止编辑应用设置（DisableSettingsEditing）',
-    'DisableSplashCustomize':'禁止自定义启动加载界面（DisableSplashCustomize）',
-    'DisableDebugMenu':'禁用调试菜单（DisableDebugMenu）',
-    'AllowExitManagement':'允许退出集控（AllowExitManagement）'
-  };
-  const ed=document.getElementById('editor');ed.innerHTML='';
-  for(const k in policy){
-    const div=document.createElement('div');div.className='json-item';
-    div.innerHTML=`<span>${map[k]}</span>
-      <div class="toggle ${policy[k]?'on':''}" onclick="toggleKey('${k}',this)"></div>`;
-    ed.appendChild(div);
+/* ===== 保存到 GitHub ===== */
+async function savePolicy() {
+  const err = document.getElementById('err3');
+  if (!TOKEN) await loadToken();
+  try {
+    const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`);
+    const data = await res.json();
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(policy, null, 2))));
+    const body = {
+      message: 'Update Policy.json via frontend',
+      content,
+      sha: data.sha
+    };
+    const put = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`, {
+      method: 'PUT',
+      headers: { Authorization: `token ${TOKEN}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    if (put.ok) {
+      alert('已保存到 GitHub！几分钟后再重启Classisland即可生效');
+      err.textContent = '';
+    } else {
+      const e = await put.json();
+      err.textContent = '保存失败：' + e.message;
+    }
+  } catch (e) {
+    err.textContent = '网络或配置错误';
   }
 }
 
-function toggleKey(k,el){
-  policy[k]=!policy[k];el.classList.toggle('on');
-}
-
-/* ===== 业务函数 ===== */
-async function loadPolicy(){
-  if (!TOKEN) await loadToken();
-  const res=await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`);
-  if(!res.ok) throw new Error('读文件失败：'+res.status);
-  const data=await res.json();
-  policy=JSON.parse(decodeURIComponent(escape(atob(data.content))));
-  renderEditor(); // ← 这里一定已定义
-}
-
-async function savePolicy(){
-  if (!TOKEN) await loadToken();
-  const content=btoa(unescape(encodeURIComponent(JSON.stringify(policy,null,2))));
-  const body={message:'Update Policy.json via frontend',content,sha:(await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`).then(r=>r.json())).sha};
-  const put=await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`,{
-    method:'PUT',
-    headers:{Authorization:`token ${TOKEN}`,'Content-Type':'application/json'},
-    body:JSON.stringify(body)
-  });
-  if(put.ok){alert('已保存到 GitHub！');}else{alert('保存失败：'+put.status);}
-}
-
-/* ===== 入口 ===== */
-loadToken().then(()=>{
-  slideTo(0);          // 显示第一屏
-  // 需要自动加载 Policy 就放开下一行
-  // loadPolicy();
+// 入口：先拿 token → 再显示第一屏
+loadToken().then(() => {
+  slideTo(0);
+  // loadPolicy(); // 需要就放开
 });
   </script>
 </body>
