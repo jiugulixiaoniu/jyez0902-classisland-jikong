@@ -1,0 +1,142 @@
+{
+  "monday-plan": {
+    "TimeLayoutId": "d0ed9d46-df11-468b-82de-629a0a7464d6",
+    "TimeRule": {
+      "WeekDay": 1,
+      "WeekCountDiv": 0,
+      "WeekCountDivTotal": 2,
+      "IsActive": true
+    },
+    "Classes": [
+      {"SubjectId": "3bbed0c0-bcf3-4dfe-a78d-5da9b02cf8bd", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 早读：英语
+      {"SubjectId": "3bbed0c0-bcf3-4dfe-a78d-5da9b02cf8bd", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第一节：英语
+      {"SubjectId": "1154d452-5ede-4194-b4dd-cb40c956c8ed", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第二节：数学
+      {"SubjectId": "97d0bf3f-137f-4f8a-87d6-ff387063bbd3", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第三节：语文
+      {"SubjectId": "9f0d71b7-b4da-4040-a3d5-64da7573c6dd", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第四节：道法
+      {"SubjectId": "d18e9906-0210-4f00-9dd6-b919f0dd8287", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第五节：化学
+      {"SubjectId": "a4a76e77-29d8-4103-882c-2f4c9d1e8077", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第六节：物理
+      {"SubjectId": "0ed2307b-4d9b-48fa-97ed-94bd2213c84e", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第七节：体育
+      {"SubjectId": "", "IsChangedClass": false, "IsEnabled": false, "AttachedObjects": {}, "IsActive": false}  // 第八节：无
+    ],
+    "Name": "周一课程表",
+    "IsOverlay": false,
+    "OverlaySourceId": null,
+    "OverlaySetupTime": "2025-09-07T15:20:23.8658237+08:00",
+    "IsEnabled": true,
+    "AssociatedGroup": "acaf4ef0-e261-4262-b941-34ea93cb4369",
+    "AttachedObjects": {},
+    "IsActive": true
+  },
+  "tuesday-plan": {
+    "TimeLayoutId": "d0ed9d46-df11-468b-82de-629a0a7464d6",
+    "TimeRule": {
+      "WeekDay": 2,
+      "WeekCountDiv": 0,
+      "WeekCountDivTotal": 2,
+      "IsActive": true
+    },
+    "Classes": [
+      {"SubjectId": "97d0bf3f-137f-4f8a-87d6-ff387063bbd3", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 早读：语文
+      {"SubjectId": "97d0bf3f-137f-4f8a-87d6-ff387063bbd3", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第一节：语文
+      {"SubjectId": "1154d452-5ede-4194-b4dd-cb40c956c8ed", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第二节：数学
+      {"SubjectId": "44ec22d3-3dde-40e6-8eb7-a1f4cd378a04", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第三节：历史
+      {"SubjectId": "0ed2307b-4d9b-48fa-97ed-94bd2213c84e", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第四节：体育
+      {"SubjectId": "a4a76e77-29d8-4103-882c-2f4c9d1e8077", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第五节：物理
+      {"SubjectId": "3bbed0c0-bcf3-4dfe-a78d-5da9b02cf8bd", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第六节：英语
+      {"SubjectId": "3bbed0c0-bcf3-4dfe-a78d-5da9b02cf8bd", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第七节：英语
+      {"SubjectId": "", "IsChangedClass": false, "IsEnabled": false, "AttachedObjects": {}, "IsActive": false}  // 第八节：无
+    ],
+    "Name": "周二课程表",
+    "IsOverlay": false,
+    "OverlaySourceId": null,
+    "OverlaySetupTime": "2025-09-07T15:20:23.8684595+08:00",
+    "IsEnabled": true,
+    "AssociatedGroup": "acaf4ef0-e261-4262-b941-34ea93cb4369",
+    "AttachedObjects": {},
+    "IsActive": true
+  },
+  "wednesday-plan": {
+    "TimeLayoutId": "d0ed9d46-df11-468b-82de-629a0a7464d6",
+    "TimeRule": {
+      "WeekDay": 3,
+      "WeekCountDiv": 0,
+      "WeekCountDivTotal": 2,
+      "IsActive": true
+    },
+    "Classes": [
+      {"SubjectId": "3bbed0c0-bcf3-4dfe-a78d-5da9b02cf8bd", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 早读：英语
+      {"SubjectId": "3bbed0c0-bcf3-4dfe-a78d-5da9b02cf8bd", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第一节：英语
+      {"SubjectId": "9f0d71b7-b4da-4040-a3d5-64da7573c6dd", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第二节：道法
+      {"SubjectId": "97d0bf3f-137f-4f8a-87d6-ff387063bbd3", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第三节：语文
+      {"SubjectId": "97d0bf3f-137f-4f8a-87d6-ff387063bbd3", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第四节：语文
+      {"SubjectId": "1154d452-5ede-4194-b4dd-cb40c956c8ed", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第五节：数学
+      {"SubjectId": "a4a76e77-29d8-4103-882c-2f4c9d1e8077", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第六节：物理
+      {"SubjectId": "d18e9906-0210-4f00-9dd6-b919f0dd8287", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第七节：化学
+      {"SubjectId": "0ed2307b-4d9b-48fa-97ed-94bd2213c84e", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false}  // 第八节：体育
+    ],
+    "Name": "周三课程表",
+    "IsOverlay": false,
+    "OverlaySourceId": null,
+    "OverlaySetupTime": "2025-09-07T15:20:23.8685064+08:00",
+    "IsEnabled": true,
+    "AssociatedGroup": "acaf4ef0-e261-4262-b941-34ea93cb4369",
+    "AttachedObjects": {},
+    "IsActive": true
+  },
+  "thursday-plan": {
+    "TimeLayoutId": "d0ed9d46-df11-468b-82de-629a0a7464d6",
+    "TimeRule": {
+      "WeekDay": 4,
+      "WeekCountDiv": 0,
+      "WeekCountDivTotal": 2,
+      "IsActive": true
+    },
+    "Classes": [
+      {"SubjectId": "97d0bf3f-137f-4f8a-87d6-ff387063bbd3", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 早读：语文
+      {"SubjectId": "3bbed0c0-bcf3-4dfe-a78d-5da9b02cf8bd", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第一节：英语
+      {"SubjectId": "97d0bf3f-137f-4f8a-87d6-ff387063bbd3", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第二节：语文
+      {"SubjectId": "1154d452-5ede-4194-b4dd-cb40c956c8ed", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第三节：数学
+      {"SubjectId": "9f0d71b7-b4da-4040-a3d5-64da7573c6dd", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第四节：道法
+      {"SubjectId": "0ed2307b-4d9b-48fa-97ed-94bd2213c84e", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第五节：体育
+      {"SubjectId": "44ec22d3-3dde-40e6-8eb7-a1f4cd378a04", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第六节：历史
+      {"SubjectId": "d18e9906-0210-4f00-9dd6-b919f0dd8287", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第七节：化学
+      {"SubjectId": "", "IsChangedClass": false, "IsEnabled": false, "AttachedObjects": {}, "IsActive": false}  // 第八节：无
+    ],
+    "Name": "周四课程表",
+    "IsOverlay": false,
+    "OverlaySourceId": null,
+    "OverlaySetupTime": "2025-09-07T15:20:23.8685239+08:00",
+    "IsEnabled": true,
+    "AssociatedGroup": "acaf4ef0-e261-4262-b941-34ea93cb4369",
+    "AttachedObjects": {},
+    "IsActive": true
+  },
+  "friday-plan": {
+    "TimeLayoutId": "d0ed9d46-df11-468b-82de-629a0a7464d6",
+    "TimeRule": {
+      "WeekDay": 5,
+      "WeekCountDiv": 0,
+      "WeekCountDivTotal": 2,
+      "IsActive": true
+    },
+    "Classes": [
+      {"SubjectId": "3bbed0c0-bcf3-4dfe-a78d-5da9b02cf8bd", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 早读：英语
+      {"SubjectId": "1154d452-5ede-4194-b4dd-cb40c956c8ed", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第一节：数学
+      {"SubjectId": "1154d452-5ede-4194-b4dd-cb40c956c8ed", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第二节：数学
+      {"SubjectId": "3bbed0c0-bcf3-4dfe-a78d-5da9b02cf8bd", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第三节：英语
+      {"SubjectId": "44ec22d3-3dde-40e6-8eb7-a1f4cd378a04", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第四节：历史
+      {"SubjectId": "97d0bf3f-137f-4f8a-87d6-ff387063bbd3", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第五节：语文
+      {"SubjectId": "a4a76e77-29d8-4103-882c-2f4c9d1e8077", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第六节：物理
+      {"SubjectId": "d18e9906-0210-4f00-9dd6-b919f0dd8287", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false},  // 第七节：化学
+      {"SubjectId": "cf251cd8-2aab-4aa1-8211-50f4e6919a3d", "IsChangedClass": false, "IsEnabled": true, "AttachedObjects": {}, "IsActive": false}  // 第八节：班会
+    ],
+    "Name": "周五课程表",
+    "IsOverlay": false,
+    "OverlaySourceId": null,
+    "OverlaySetupTime": "2025-09-07T15:20:23.8685418+08:00",
+    "IsEnabled": true,
+    "AssociatedGroup": "acaf4ef0-e261-4262-b941-34ea93cb4369",
+    "AttachedObjects": {},
+    "IsActive": true
+  }
+}
