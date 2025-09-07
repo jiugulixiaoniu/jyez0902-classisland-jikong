@@ -1,403 +1,212 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <title>Classisland0902 IT人员 Policy策略 管理后台</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- 样式沿用你已有的 -->
-  <style>
-    :root {
-  --primary: #667eea;
-  --secondary: #764ba2;
-  --success: #4caf50;
-  --radius: 12px;
-  --shadow: 0 8px 32px rgba(0, 0, 0, .2);
+<meta charset="UTF-8" />
+<title>Classisland Policy 管理后台</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<style>
+:root{
+  --primary:#667eea;
+  --secondary:#764ba2;
+  --success:#4caf50;
+  --radius:12px;
+  --shadow:0 8px 32px rgba(0,0,0,.2);
 }
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',sans-serif;}
+body{
+  height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
 }
-
-body {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+.glass{
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  width:90%;max-width:660px;
+  overflow:hidden;color:#fff;
 }
-
-/* ===== 玻璃面板 ===== */
-.glass {
-  background: rgba(255, 255, 255, .15);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, .18);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  width: 90%;
-  max-width: 660px;
-  /* 修改面板加宽到 660px 方便一行两列 */
-  overflow: hidden;
-  color: #fff;
+.slider{display:flex;transition:transform .6s;width:300%;}
+.slide{width:33.33333%;flex-shrink:0;padding:40px 35px}
+h2{margin-bottom:25px;text-align:center;font-weight:600}
+input[type=password]{
+  width:100%;padding:14px 16px;margin:12px 0;border:none;
+  border-radius:var(--radius);background:rgba(255,255,255,.2);
+  color:#fff;font-size:16px;
 }
-
-.slider {
-  display: flex;
-  transition: transform .6s cubic-bezier(.4, 0, .2, 1);
-  width: 300%;
+input[type=password]::placeholder{color:rgba(255,255,255,.7)}
+input[type=password]:focus{outline:none;background:rgba(255,255,255,.3)}
+button{
+  width:100%;padding:14px;border:none;border-radius:var(--radius);
+  background:var(--primary);color:#fff;font-size:16px;font-weight:600;
+  cursor:pointer;transition:background .3s,transform .2s;
 }
-
-.slide {
-  width: 33.33333%;
-  flex-shrink: 0;
-  padding: 40px 35px;
+button:hover{background:var(--secondary)}
+button:active{transform:scale(.98)}
+.error{margin-top:12px;text-align:center;font-size:14px;color:#ffeb3b}
+.json-grid{display:flex;flex-wrap:wrap;gap:15px;margin-top:15px}
+.json-item{
+  flex:1 1 48%;min-width:280px;display:flex;justify-content:space-between;align-items:center;
+  padding:12px 15px;background:rgba(255,255,255,.1);border-radius:var(--radius);
 }
-
-h2 {
-  margin-bottom: 25px;
-  text-align: center;
-  font-weight: 600;
+.json-item span{margin-right:10px;word-break:break-word}
+.toggle{
+  flex-shrink:0;width:46px;height:24px;background:rgba(255,255,255,.3);
+  border-radius:12px;position:relative;cursor:pointer;transition:background .3s;
 }
-
-input[type=password] {
-  width: 100%;
-  padding: 14px 16px;
-  margin: 12px 0;
-  border: none;
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, .2);
-  color: #fff;
-  font-size: 16px;
+.toggle.on{background:var(--success)}
+.toggle::after{
+  content:'';position:absolute;width:20px;height:20px;background:#fff;
+  border-radius:50%;top:2px;left:2px;transition:transform .3s;
 }
-
-input[type=password]::placeholder {
-  color: rgba(255, 255, 255, .7);
-}
-
-input[type=password]:focus {
-  outline: none;
-  background: rgba(255, 255, 255, .3);
-}
-
-button {
-  width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: var(--radius);
-  background: var(--primary);
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background .3s, transform .2s;
-}
-
-button:hover {
-  background: var(--secondary);
-}
-
-button:active {
-  transform: scale(.98);
-}
-
-.error {
-  margin-top: 12px;
-  text-align: center;
-  font-size: 14px;
-  color: #ffeb3b;
-}
-
-/* ===== 修改面板：一行两列 ===== */
-.json-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 15px;
-}
-
-.json-item {
-  flex: 1 1 48%;
-  /* 约 50% 宽，gap 补间隙 */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 15px;
-  background: rgba(255, 255, 255, .1);
-  border-radius: var(--radius);
-}
-
-.toggle {
-  width: 46px;
-  height: 24px;
-  background: rgba(255, 255, 255, .3);
-  border-radius: 12px;
-  position: relative;
-  cursor: pointer;
-  transition: background .3s;
-}
-
-.toggle.on {
-  background: var(--success);
-}
-
-.toggle::after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  border-radius: 50%;
-  top: 2px;
-  left: 2px;
-  transition: transform .3s;
-}
-
-.toggle.on::after {
-  transform: translateX(22px);
-}
-
-.hidden {
-  display: none;
-}
-.btn-primary {
-  display: block;          /* 占整行 */
-  width: 100%;
-  margin-top: 20px;        /* 与上方内容保持距离 */
-  padding: 14px;
-  border: none;
-  border-radius: var(--radius);
-  background: var(--primary);
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background .3s, transform .2s;
-}
-.btn-primary:hover {
-  background: var(--secondary);
-}
-.btn-primary:active {
-  transform: scale(.98);
-}
-.json-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 15px;
-}
-
-.json-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex: 1 1 48%;          /* 两列，不放大，允许缩小一点，但最小宽度固定 */
-  min-width: 280px;       /* 关键：防挤压！一行放不下就自动换行 */
-  padding: 12px 15px;
-  background: rgba(255, 255, 255, .1);
-  border-radius: var(--radius);
-}
-
-/* 文字区域不抢空间 */
-.json-item span {
-  flex-shrink: 1;
-  margin-right: 10px;
-  word-break: break-word;
-}
-
-/* 开关固定宽度，不被压缩 */
-.toggle {
-  flex-shrink: 0;
-  width: 46px;
-  height: 24px;
-  background: rgba(255, 255, 255, .3);
-  border-radius: 12px;
-  position: relative;
-  cursor: pointer;
-  transition: background .3s;
-}
-.toggle.on {
-  background: var(--success);
-}
-.toggle::after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  border-radius: 50%;
-  top: 2px;
-  left: 2px;
-  transition: transform .3s;
-}
-.toggle.on::after {
-  transform: translateX(22px);
-}
-  </style>
+.toggle.on::after{transform:translateX(22px)}
+.hidden{display:none}
+</style>
 </head>
 <body>
-  <div class="glass" id="panel">
-    <div class="slider" id="slider">
-      <div class="slide" id="s1">
-        <h2>验证身份 · 第一步</h2>
-        <input type="password" id="pwd1" placeholder="输入第一层密码">
-        <button onclick="nextStep()">下一步</button>
-        <div class="error" id="err1"></div>
-      </div>
-      <div class="slide" id="s2">
-        <h2>验证身份 · 第二步</h2>
-        <input type="password" id="pwd2" placeholder="输入第二层密码">
-        <button onclick="login()">进入后台</button>
-        <div class="error" id="err2"></div>
-      </div>
-      <div class="slide" id="s3">
-        <h2>Policy.json 可视化编辑</h2>
-        <div id="editor" class="json-grid"></div>
-        <button onclick="savePolicy()">保存到 GitHub</button>
-        <div class="error" id="err3"></div>
-      </div>
+
+<div class="glass" id="panel">
+  <div class="slider" id="slider">
+    <!--  slide1  -->
+    <div class="slide" id="s1">
+      <h2>验证身份 · 第一步</h2>
+      <input type="password" id="pwd1" placeholder="输入第一层密码"/>
+      <button onclick="step1()">下一步</button>
+      <div class="error" id="err1"></div>
+    </div>
+    <!--  slide2  -->
+    <div class="slide" id="s2">
+      <h2>验证身份 · 第二步</h2>
+      <input type="password" id="pwd2" placeholder="输入第二层密码"/>
+      <button onclick="step2()">进入后台</button>
+      <div class="error" id="err2"></div>
+    </div>
+    <!--  slide3  -->
+    <div class="slide" id="s3">
+      <h2>Policy.json 可视化编辑</h2>
+      <div id="editor" class="json-grid"></div>
+      <button onclick="savePolicy()">保存到 GitHub</button>
+      <div class="error" id="err3"></div>
     </div>
   </div>
+</div>
 
-  <script>
-    /* ===== 配置 ===== */
-    // ===== 基础混淆（无外部库） =====
-    const PASSWORD_1 = atob('TXp5NDQ2MjcwMDU3'); // 123456
-    const PASSWORD_2 = atob('MjAyNUNTUEoxYmlzaGVuZw=='); // 654321
+<script>
+/* ==========  配置  ========== */
+const PASS1 = atob('TXp5NDQ2MjcwMDU3');        // 123456
+const PASS2 = atob('MjAyNUNTUEoxYmlzaGVuZw=='); // 654321
+const OWNER = 'jiugulixiaoniu';
+const REPO  = 'jyez0902-classisland-jikong';
+const PATH  = '0902/Policy.json';
 
-    const OWNER = 'jiugulixiaoniu';
-    const REPO  = 'jyez0902-classisland-jikong';
-    const PATH  = '0902/Policy.json';
+let policy = {};          // 运行时内存数据
+let TOKEN  = '';          // 解密后 GitHub PAT
+let SHA    = '';          // 当前文件 sha，保存必填
 
-    let policy = {};
-    let TOKEN = ''; // 运行时填充
+/* ==========  工具  ========== */
+const $ = id => document.getElementById(id);
+function slide(idx){
+  $('slider').style.transform = `translateX(-${idx*100/3}%)`;
+}
+function toast(msg,err=false){
+  const box = err?$('err3'):$('err1');
+  box.textContent = msg;
+  if(!err) setTimeout(()=>box.textContent='',2000);
+}
 
-    /* ===== 加密 token ===== */
-    async function loadToken() {
-      const enc = await fetch(`https://raw.githubusercontent.com/${OWNER}/${REPO}/main/0902/0902.enc-token`)
-                     .then(r => r.text()).then(t => t.trim());
-      const base64 = enc.split('').reverse().map(c => String.fromCharCode(c.charCodeAt(0) - 1)).join('');
-      TOKEN = atob(base64);
-    }
+/* ==========  解密 TOKEN  ========== */
+async function loadToken(){
+  const raw = await fetch(`https://raw.githubusercontent.com/${OWNER}/${REPO}/main/0902/0902.enc-token`)
+                  .then(r=>r.ok?r.text():Promise.reject(r.status));
+  const base64 = raw.split('').reverse().map(c=>String.fromCharCode(c.charCodeAt(0)-1)).join('');
+  TOKEN = atob(base64);
+}
 
-    /* ===== 平滑切换 ===== */
-    function slideTo(index) {
-      document.getElementById('slider').style.transform = `translateX(-${index * 333.33333}%)`;
-    }
+/* ==========  步骤 1  ========== */
+function step1(){
+  if($('pwd1').value === PASS1){slide(1);$('err1').textContent='';}
+  else $('err1').textContent = '密码错误';
+}
 
-    /* ===== 用户验证 ===== */
-    function nextStep() {
-      const p = document.getElementById('pwd1').value;
-      if (p === PASSWORD_1) {
-         slideTo(1);
-         document.getElementById('err1').textContent = '';
-       } else {
-         document.getElementById('err1').textContent = '密码错误';
-      }
-    }
+/* ==========  步骤 2  ========== */
+function step2(){
+  if($('pwd2').value === PASS2){$('err2').textContent=''; loadPolicy();}
+  else $('err2').textContent = '密码错误';
+}
 
-    function login() {
-      const p = document.getElementById('pwd2').value;
-      if (p === PASSWORD_2) {
-         slideTo(2);
-         loadPolicy();
-       } else {
-         document.getElementById('err2').textContent = '密码错误';
-      }
-    }
+/* ==========  加载 Policy  ========== */
+async function loadPolicy(){
+  try{
+    if(!TOKEN) await loadToken();
+    const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`);
+    if(!res.ok) throw new Error('读取失败 '+res.status);
+    const data = await res.json();
+    SHA = data.sha;
+    policy = JSON.parse(decodeURIComponent(escape(atob(data.content))));
+    renderEditor();
+    slide(2);               // 进入第三屏
+  }catch(e){
+    console.error(e); alert(e.message);
+  }
+}
 
-    /* ===== 加载 & 渲染 ===== */
-    async function loadPolicy() {
-      if (!TOKEN) await loadToken();
-      try {
-        const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`);
-        if (!res.ok) throw new Error('读取失败：' + res.status);
-        const data = await res.json();
-        policy = JSON.parse(decodeURIComponent(escape(atob(data.content))));
-        renderEditor();
-      } catch (e) {
-        console.error(e);
-        alert(e.message);
-      }
-    }
-
-   function renderEditor() {
-  const map = {
-    'DisableProfileClassPlanEditing': '禁止编辑课表',
-    'DisableProfileTimeLayoutEditing': '禁止编辑时间表',
-    'DisableProfileSubjectsEditing': '禁止编辑科目',
-    'DisableProfileEditing': '禁止编辑档案',
-    'DisableSettingsEditing': '禁止编辑应用设置',
-    'DisableSplashCustomize': '禁止自定义启动加载界面',
-    'DisableDebugMenu': '禁用调试菜单',
-    'AllowExitManagement': '允许退出集控'
+/* ==========  渲染编辑器  ========== */
+function renderEditor(){
+  const map={
+    'DisableProfileClassPlanEditing':'禁止编辑课表',
+    'DisableProfileTimeLayoutEditing':'禁止编辑时间表',
+    'DisableProfileSubjectsEditing':'禁止编辑科目',
+    'DisableProfileEditing':'禁止编辑档案',
+    'DisableSettingsEditing':'禁止编辑应用设置',
+    'DisableSplashCustomize':'禁止自定义启动加载界面',
+    'DisableDebugMenu':'禁用调试菜单',
+    'AllowExitManagement':'允许退出集控'
   };
-
-  const ed = document.getElementById('editor');
-  ed.innerHTML = '';   // 先清空
-
-  for (const k in policy) {
-    const item = document.createElement('div');
-    item.className = 'json-item';
+  const ed = $('editor');
+  ed.innerHTML='';
+  for(const k of Object.keys(policy)){
+    const item = document.createElement('div'); item.className='json-item';
 
     const label = document.createElement('span');
-    label.textContent = map[k] || k;
+    label.textContent = map[k]||k;
 
     const toggle = document.createElement('div');
-    toggle.className = 'toggle' + (policy[k] ? ' on' : '');
-    toggle.onclick = () => {
-      policy[k] = !policy[k];
-      toggle.classList.toggle('on');
-      console.log('[toggle]', k, '=', policy[k]);
-    };
+    toggle.className = 'toggle'+(policy[k]?' on':'');
+    toggle.onclick = ()=>{ policy[k]=!policy[k]; toggle.classList.toggle('on'); };
 
-    item.appendChild(label);
-    item.appendChild(toggle);
+    item.append(label,toggle);
     ed.appendChild(item);
   }
-  console.log('[renderEditor] done, total items =', Object.keys(policy).length);
-}
-function toggleKey(k, el) {
-  policy[k] = !policy[k];
-  el.classList.toggle('on');
 }
 
-/* ===== 保存到 GitHub ===== */
-async function savePolicy() {
-  const err = document.getElementById('err3');
-  if (!TOKEN) await loadToken();
-  try {
-    const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`);
-    const data = await res.json();
-    const content = btoa(unescape(encodeURIComponent(JSON.stringify(policy, null, 2))));
-    const body = {
-      message: 'Update Policy.json via frontend',
-      content,
-      sha: data.sha
-    };
-    const put = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`, {
-      method: 'PUT',
-      headers: { Authorization: `token ${TOKEN}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
+/* ==========  保存 Policy  ========== */
+async function savePolicy(){
+  try{
+    if(!TOKEN) await loadToken();
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(policy,null,2))));
+    const body = {message:'Update Policy.json via frontend',content,sha:SHA};
+    const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`,{
+      method:'PUT',
+      headers:{'Authorization':`token ${TOKEN}`,'Content-Type':'application/json'},
+      body:JSON.stringify(body)
     });
-    if (put.ok) {
-      alert('已保存到 GitHub！几分钟后再重启Classisland即可生效');
-      err.textContent = '';
-    } else {
-      const e = await put.json();
-      err.textContent = '保存失败：' + e.message;
+    if(res.ok){
+      const data = await res.json();
+      SHA = data.content.sha;      // 更新本地 sha
+      alert('已保存！数分钟后重启 Classisland 生效');
+      $('err3').textContent='';
+    }else{
+      const e = await res.json();
+      throw new Error(e.message);
     }
-  } catch (e) {
-    err.textContent = '网络或配置错误';
+  }catch(e){
+    $('err3').textContent = '保存失败：'+e.message;
   }
 }
 
-// 入口：先拿 token → 再显示第一屏
-loadToken().then(() => {
-  slideTo(0);
-  // loadPolicy(); // 需要就放开
-});
-  </script>
+/* ==========  入口  ========== */
+loadToken().then(()=>slide(0)).catch(e=>alert('Token 加载失败\n'+e.message));
+</script>
 </body>
 </html>
