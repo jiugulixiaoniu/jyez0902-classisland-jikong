@@ -1,6 +1,6 @@
 {
     "ServerKind": 0,
-    "OrganizationName": "JGL Studio",
+    "Organization": "JGL Studio",
     "ClassPlanSource": {
         "Value": "https://jiugulixiaoniu.github.io/jyez0902-classisland-jikong/0902/classplans.json",
         "Version": 2
