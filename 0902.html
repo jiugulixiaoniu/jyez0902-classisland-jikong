@@ -204,9 +204,13 @@ async function savePolicy(){
     $('err3').textContent = '保存失败：'+e.message;
   }
 }
-
+document.onkeydown=e=>{
+      if(e.key==='F12'||(e.ctrlKey&&e.shiftKey&&['I','J'].includes(e.key))||(e.ctrlKey&&e.key==='U'))return false;
+    };
+    document.oncontextmenu=()=>false;
 /* ==========  入口  ========== */
 loadToken().then(()=>slide(0)).catch(e=>alert('Token 加载失败\n'+e.message));
+  
 </script>
 </body>
 </html>
