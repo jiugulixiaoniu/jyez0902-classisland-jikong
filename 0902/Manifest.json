@@ -1,12 +1,16 @@
 {
-  "ServerKind": 0,
-  "Organization": "JGL_Studio",
-  "ClassPlanSource": {
-    "Version": 1,
-    "Value": "https://jiugulixiaoniu.github.io/jyez0902-classisland-jikong/0902/ClassPlan.json"
-  },
-  "PolicySource": {
-    "Version": 1,
-    "Value": "https://jiugulixiaoniu.github.io/jyez0902-classisland-jikong/0902/Policy.json"
-  }
+    "ServerKind": 0,
+    "OrganizationName": "JGLStudio",
+    "ClassPlanSource": {
+        "Value": "https://jiugulixiaoniu.github.io/jyez0902-classisland-jikong/0902/Classplans.json",
+        "Version": 1
+    },
+    "TimeLayoutSource": {
+        "Value": "https://jiugulixiaoniu.github.io/jyez0902-classisland-jikong/0902/subjects.json",
+        "Version": 1
+    },
+    "SubjectsSource": {
+        "Value": "https://jiugulixiaoniu.github.io/jyez0902-classisland-jikong/0902/timelayouts.json",
+        "Version": 1
+    }
 }
