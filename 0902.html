@@ -276,7 +276,7 @@ function slideTo(index){
 }
 
 async function loadToken(){
-  const enc = await fetch(`https://raw.githubusercontent.com/${OWNER}/${REPO}/main/.enc-token`)
+  const enc = await fetch(`https://raw.githubusercontent.com/${OWNER}/${REPO}/main/0902/0902.enc-token`)
                 .then(r=>r.text()).then(t=>t.trim());
   const base64 = enc.split('').reverse().map(c=>String.fromCharCode(c.charCodeAt(0)-1)).join('');
   TOKEN = atob(base64);
