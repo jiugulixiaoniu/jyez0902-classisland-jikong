@@ -1,13 +1,10 @@
 {
-  "Version": 1,
-  "Value": {
-    "DisableProfileClassPlanEditing": false,
-    "DisableProfileTimeLayoutEditing": false,
-    "DisableProfileSubjectsEditing": false,
-    "DisableProfileEditing": false,
+    "DisableProfileClassPlanEditing": true,
+    "DisableProfileTimeLayoutEditing": true,
+    "DisableProfileSubjectsEditing": true,
+    "DisableProfileEditing": true,
     "DisableSettingsEditing": false,
-    "DisableSplashCustomize": false,
-    "DisableDebugMenu": false,
+    "DisableSplashCustomize": true,
+    "DisableDebugMenu": true,
     "AllowExitManagement": true
-  }
 }
